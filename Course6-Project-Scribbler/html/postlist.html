@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>ScriBBler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../fontawesome/css/font-awesome.min.css">
+
+  <!-- user defined stylesheet -->
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="../styles/postlist.css">
+
+</head>
+
+<body onload="insert_common_components();create_post_cards();">
+
+  <div id="header-space" class='container header-container'></div>
+  <!-- SignUp modal -->
+  <div id="modal-signup" class="modal"></div>
+  <!-- SignIn modal -->
+  <div id="modal-signin" class="modal"></div>
+  <!-- Create post modal-->
+  <div id="modal-create-post" class="modal"></div>
+  <div id="post-board" class="post-board-class"></div>
+  <!-- : Write code for delete post modal here -->
+  <div id="id04" class="modal">
+    <form class="modal-content confirm-dialog" action="">
+      <div>Are you sure you want to delete this post?</div>
+      <div class="dialog-button-area">
+        <button id="id_yes_btn" type="button" class="class-yes-btn"
+          onclick="delete_post();confirm_modal(false, null)">Yes</button>
+        <button id="id_no_btn" type="button" class="class-no-btn" onclick="confirm_modal(false, null)">No</button>
+      </div>
+    </form>
+  </div>
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/postlist.js"></script>
+
+  </body>
+
+</html>
